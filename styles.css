@@ -1,5 +1,171 @@
+@font-face {
+    font-family: 'norsebold';
+    src: url('Norse Bold/norsebold-webfont.woff2') format('woff2'),
+         url('Norse Bold/norsebold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+}
+
+.page-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-panel {
+    flex: 0 0 37%; /* Fixed width of 37% */
+    position: relative;
+    background-image: url(halie-west.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.right-panel {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    background-color: #f9fafb;
+}
+
+.logo-banner {
+    position: absolute;
+    top: 25%;
+    transform: translateY(-25%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.7rem 0;
+}
+
+.logo-banner img {
+    height: 100px;
+}
+
+.logo-banner h1 {
+    color: white;
+    font-family: 'norsebold', sans-serif;
+    font-size: 4.5rem;
+} 
+
+.image-credit {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.6rem;
+    color: white;
+}
+
+.image-credit a {
+    color: white;
+    text-decoration: underline;
+}
+
+.intro-text,
+.login-link {
+    padding: 0 2.5rem;
+}
+
+.intro-text {
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-card {
+  background-color: white;
+  padding: 1rem 2rem;
+  padding-bottom: 2rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.form-card h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+}
+
+.first-name-field,
+.last-name-field,
+.email-field,
+.phone-number-field,
+.password-field,
+.confirm-password-field {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.1em;
+}
+
+.signup-form button {
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+    align-self: flex-start;
+    background-color: #596D48;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: #4c5f3f;
+}
+
+.signup-form button:active {
+    transform: scale(0.98);
+}
+
+.login-link {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
 }
