@@ -114,6 +114,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem 2rem;
+    padding-right: 25%;
 }
 
 .first-name-field,
@@ -128,9 +129,10 @@ body {
 
 label {
     font-size: 0.6rem;
+    color: #737373;
     font-weight: 700;
     margin-bottom: 0.2rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
 }
 
 .signup-form button {
@@ -142,7 +144,7 @@ label {
     border: none;
     border-radius: 6px;
     padding: 0.75rem 2.5rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
 }
@@ -168,4 +170,30 @@ label {
 
 .login-link a:hover {
     text-decoration: underline;
+}
+
+.form-fields input {
+    height: 28px;
+}
+
+.form-fields input {
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+    font-size: 1 rem;
+}
+
+.form-fields input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+.form-fields input:not(:focus):not(:placeholder-shown):invalid {
+    border-color: #DC2626;
+    box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.3);
+}
+
+.form-card h2 {
+    font-size: 1.2rem;
 }
